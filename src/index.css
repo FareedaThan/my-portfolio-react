@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "JetBrains Mono", monospace;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --primary: #232324;
+  --secondary: #f6f6f6;
+}
+
+body {
+  margin: 0;
+  color: var(--primary);
+  background-color: var(--secondary);
+  min-height: 100vh;
+}
+
+@layer components {
+  .btn-black {
+    padding: 8px 10px;
+    text-align: center;
+    width: auto;
+    border: solid 2px;
+    border-radius: 10px;
+    background-color: var(--primary);
+    color: var(--secondary);
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .btn-black:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: var(--primary) solid 2px;
+  }
+}
