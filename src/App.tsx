@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import ArtGallery from "./pages/ArtGallery";
 import Footer from "./components/Footer";
+import ScrollBtn from "./components/ScrollBtn";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/artgallery" element={<ArtGallery />} />
         </Routes>
       </Navbar>
+      <ScrollBtn />
       <Footer />
     </BrowserRouter>
   );
