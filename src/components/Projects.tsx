@@ -1,3 +1,6 @@
+import { projects } from "../data/Projects";
+import ProjectCard from "./ProjectCard";
+
 const Projects = () => {
   return (
     <div
@@ -7,6 +10,9 @@ const Projects = () => {
       <p className="font-extrabold text-4xl text-center pb-5 border-black border-b-[1px] ">
         Projects
       </p>
+      {projects.map((project) => (
+        <ProjectCard key={project.name} {...project} />
+      ))}
     </div>
   );
 };

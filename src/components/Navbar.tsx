@@ -17,13 +17,19 @@ const Navbar = ({ children }: ChildProps) => {
             FAREEDA.CO
           </NavLink>
 
-          {path === "/artgallery" ? (
+          {path === "/artgallery" || path === "/blog" ? (
             <nav className="flex flex-row gap-10">
               <NavLink
                 to="/"
                 className="transition duration-300 hover:scale-105 hover:font-bold cursor-pointer"
               >
                 Home
+              </NavLink>
+              <NavLink
+                to="/blog"
+                className="transition duration-300 hover:scale-105 hover:font-bold cursor-pointer"
+              >
+                Blog
               </NavLink>
               <NavLink
                 to="/artgallery"
@@ -58,6 +64,12 @@ const Navbar = ({ children }: ChildProps) => {
               >
                 Education
               </Link>
+              <NavLink
+                to="/blog"
+                className="transition duration-300 hover:scale-105 hover:font-bold cursor-pointer"
+              >
+                Blog
+              </NavLink>
               <NavLink
                 to="/artgallery"
                 className="transition duration-300 hover:scale-105 hover:font-bold cursor-pointer"
