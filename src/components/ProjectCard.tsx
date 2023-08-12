@@ -16,6 +16,7 @@ const ProjectCard = (props: IProject) => {
           <p className="text-left relative group">
             <a
               href={props.demo}
+              target="_blank"
               className=" font-semibold text-2xl transition duration-300 hover:opacity-80 cursor-pointer"
             >
               {props.name}

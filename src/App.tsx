@@ -6,6 +6,7 @@ import ArtGallery from "./pages/ArtGallery";
 import Footer from "./components/Footer";
 import ScrollBtn from "./components/ScrollBtn";
 import Blog from "./pages/Blog";
+import BarGraph from "./blogs/BarGraph";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/artgallery" element={<ArtGallery />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/graph" element={<BarGraph />} />
         </Routes>
       </Navbar>
       <ScrollBtn />

@@ -17,7 +17,7 @@ const Navbar = ({ children }: ChildProps) => {
             FAREEDA.CO
           </NavLink>
 
-          {path === "/artgallery" || path === "/blog" ? (
+          {path !== "/" ? (
             <nav className="flex flex-row gap-10">
               <NavLink
                 to="/"
