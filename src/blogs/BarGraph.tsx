@@ -82,12 +82,11 @@ const Bar = ({ x, y, width, height, label }: any) => (
 
 const BarGraph = () => {
   const data: BrandPrice[] = CSVToJson();
-  const [filteredData, setFilteredData] = useState<BrandPrice[]>(data);
+  const [filteredData, setFilteredData] = useState<BrandPrice[]>([]);
   const yearList = Array.from(new Set(data.map((item) => item.year)));
   // const priceList = data.map((item) => Number(item.price));
   // const maxPrice = Math.max(...priceList);
   const priceRange = arrayRange(0, 100, 20);
-  console.log(priceRange);
 
   const [filterYear, setFilterYear] = useState("");
 
@@ -109,7 +108,6 @@ const BarGraph = () => {
     applyFilter();
   }, [filterYear]);
 
-  // console.log(filteredData);
   return (
     <div className="min-h-[90vh]">
       <div className="mt-[10rem]">
@@ -117,11 +115,9 @@ const BarGraph = () => {
           Brand Price over 3 years
         </p>
         <div className="flex flex-row gap-5 justify-center items-center">
-          <p className="text-xl">select year:</p>
-          <FormControl sx={{ m: 0, width: 150 }} size="small">
-            <InputLabel sx={{ marginLeft: 0.1, marginY: -0.5 }}>
-              year
-            </InputLabel>
+          <p className="text-xl">please select year:</p>
+          <FormControl sx={{ m: 0, width: 100 }} size="small">
+            <InputLabel sx={{ marginLeft: 0.1, marginY: -0.5 }}></InputLabel>
             <Select
               value={filterYear}
               onChange={(e) => {

@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import ScrollBtn from "./components/ScrollBtn";
 import Blog from "./pages/Blog";
 import BarGraph from "./blogs/BarGraph";
+import Myth from "./blogs/Myth";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/artgallery" element={<ArtGallery />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/graph" element={<BarGraph />} />
+          <Route path="/myth" element={<Myth />} />
         </Routes>
       </Navbar>
       <ScrollBtn />
